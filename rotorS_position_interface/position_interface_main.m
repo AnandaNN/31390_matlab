@@ -9,20 +9,13 @@ close all;
 clear all;
 %%
 
-% Define name for MAV and define topic names
-mav_name = 'ardrone';
-
-position_topic = '/ardrone/odometry_sensor1/position'; %['/',mav_name,'/odometry_sensor1/position'];
-attitude_topic = ['/' mav_name '/orientation_rpy'];
-trajectory_cmd_topic = ['/' mav_name '/command/trajectory'];
-
-
-%% Connect to Simulation (must start simulation first)
-  
-rosshutdown
-%A new connection is estabilished with the ROS master
-IP_ROS_Master = '192.168.2.103';
-
-rosinit(IP_ROS_Master)
-
-d = rosdevice
+% Define constants
+FIXED_STEP_SIZE =   0.01;
+POS_SUB_DT =        0.01;
+ATTI_SUB_DT =       0.01;
+IMU_SUB_DT =        0.01;
+ODOMETRY_SUB_DT =   0.01;
+GAZEBO_SYNC_DT =    0.01;
+RAD2DEG =           180/pi;
+DEG2RAD =           pi/180;
+THRUST_OFFSET =     15;
