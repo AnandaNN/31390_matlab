@@ -1,6 +1,6 @@
 
 % This file contains parameters and calculations needed for running
-% MatLab with rotorS ROS package for interfacing with an attitude controlled
+% MatLab with rotorS ROS package for interfacing with a position controlled
 % drone
 
 %%
@@ -19,4 +19,3 @@ GAZEBO_SYNC_DT =    0.01;
 RAD2DEG =           180/pi;
 DEG2RAD =           pi/180;
 THRUST_OFFSET =     15;
-MAX_ROTOR_VEL =     838;
