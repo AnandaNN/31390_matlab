@@ -25,6 +25,8 @@ plot_route(route, fig_num);
 
 %%
 
+fig_num = 2;
+
 maze_1_3D;
 
 start = [0 0 0];
